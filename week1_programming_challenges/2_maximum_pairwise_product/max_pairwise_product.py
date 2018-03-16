@@ -5,9 +5,16 @@ assert(len(a) == n)
 
 result = 0
 
-for i in range(0, n):
-    for j in range(i+1, n):
-        if a[i]*a[j] > result:
-            result = a[i]*a[j]
+largest = 0
+second_largest = 0
+for num in a:
+    if num > largest:
+        second_largest = largest
+        largest = num
+    elif num > second_largest:
+        second_largest = num
+
+result = largest*second_largest
+
 
 print(result)
