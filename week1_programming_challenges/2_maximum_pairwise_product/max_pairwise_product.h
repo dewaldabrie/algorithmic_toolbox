@@ -1,5 +1,6 @@
 #include <vector>
+#include <stdint.h>
 
 using std::vector;
 
-long long BetterMaxPairwiseProduct(const vector<long long>& numbers);
+uint64_t BetterMaxPairwiseProduct(const vector<uint64_t>& numbers);

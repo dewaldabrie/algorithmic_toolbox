@@ -1,28 +1,16 @@
 #include <cxxtest/TestSuite.h>
-// #include <vector>
-// #include "max_pairwise_product.h"
+#include <vector>
+#include "max_pairwise_product.h"
 
-// using std::vector;
+using std::vector;
 
  
-class MyTestSuite1 : public CxxTest::TestSuite 
-{
-public:
-   void testAddition( void )
-   {
-      TS_ASSERT( 1 + 1 > 1 );
-      TS_ASSERT_EQUALS( 1 + 1, 2 );
-   }
-}; 
-
-/*  
-class MyTestSuite: public CxxTest::TestSuite
+class MyTestSuite3: public CxxTest::TestSuite
 {
 public:
     void test1(void)
     {
-      vector<long long> input = {2, 90000, 100000}; 
-      TS_ASSERT_EQUALS(BetterMaxPairwiseProduct2(input), 9000000000);
-    }`:w
-
-}*/
+      const vector<uint64_t> input = {(uint64_t)2, (uint64_t)90000, (uint64_t)100000}; 
+      TS_ASSERT_EQUALS(BetterMaxPairwiseProduct(input), (uint64_t)9000000000);
+    }
+};
