@@ -6,12 +6,12 @@ using std::cin;
 using std::cout;
 using std::vector;
 
-int MaxPairwiseProductNaive(const vector<int>& numbers) {
-  int result = 0;
-  int n = numbers.size();
-  int product = 0;
-  for (int i = 0; i < n; ++i) {
-    for (int j = i + 1; j < n; ++j) {
+uint64_t MaxPairwiseProductNaive(vector<uint64_t>& numbers) {
+  uint64_t result = 0;
+  uint64_t n = numbers.size();
+  uint64_t product = 0;
+  for (uint64_t i = 0; i < n; ++i) {
+    for (uint64_t j = i + 1; j < n; ++j) {
       product = numbers[i] * numbers[j];
       if (product > result) {
         result = product;
