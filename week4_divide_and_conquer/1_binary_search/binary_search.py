@@ -2,7 +2,27 @@
 import sys
 from random import random, shuffle, randint
 
+def _binary_search(a, low, high, key):
+    if high <= low:
+        return low - 1
+
+    mid = low + (high-low)//2
+
+    if key == a[mid]:
+        return mid
+    elif key < a[mid]:
+        return _binary_search(a, low, mid, key)
+    else:
+        return _binary_search(a, mid + 1, high, key)
+
 def binary_search(a, x):
+    """
+    Recursive version of binary search.
+    """
+    low, high = 0, len(a)
+    return _binary_search(a, low, high, x)
+
+def binary_search_iterative(a, x):
     """
     Avoid recursion to save stack space.
     """
